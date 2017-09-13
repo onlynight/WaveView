@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WaveView">
+        <attr name="waveSpeed" format="float"/>
+        <attr name="waveRange" format="dimension|reference"/>
+        <attr name="wave1Color" format="color|reference"/>
+        <attr name="wave2Color" format="color|reference"/>
+        <attr name="waveHeightPercent" format="float"/>
+        <attr name="waveStrokeWidth" format="dimension|reference"/>
+        <attr name="isCircle" format="boolean"/>
+        <attr name="period" format="float"/>
+    </declare-styleable>
+
+</resources>

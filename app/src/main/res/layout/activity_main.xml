@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.github.onlynight.waveview.WaveView
+            android:id="@+id/waveView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:isCircle="false"
+            app:period="4"
+            app:waveHeightPercent="0.5"
+            app:waveRange="15dp"
+            app:waveSpeed="10"
+            app:waveStrokeWidth="3dp"/>
+
+        <com.github.onlynight.waveview.WaveView
+            android:id="@+id/waveView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:isCircle="false"
+            app:period="2"
+            app:waveHeightPercent="0.8"
+            app:waveRange="10dp"
+            app:waveSpeed="5"
+            app:waveStrokeWidth="3dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.github.onlynight.waveview.WaveView
+            android:id="@+id/waveView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:isCircle="true"
+            app:period="3"
+            app:wave1Color="#ff00ff"
+            app:wave2Color="#a00f0f"
+            app:waveHeightPercent="0.5"
+            app:waveRange="15dp"
+            app:waveSpeed="10"
+            app:waveStrokeWidth="2dp"/>
+
+        <com.github.onlynight.waveview.WaveView
+            android:id="@+id/waveView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:isCircle="true"
+            app:period="2"
+            app:waveHeightPercent="0.3"
+            app:waveRange="20dp"
+            app:waveSpeed="10"
+            app:waveStrokeWidth="3dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
