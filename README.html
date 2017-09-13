@@ -1015,5 +1015,74 @@ body .markdown-body
   }
 }
 </style><title>README</title></head><body><article class="markdown-body"><h1 id="waveview"><a name="user-content-waveview" href="#waveview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>WaveView</h1>
-<h2 id="demo-first"><a name="user-content-demo-first" href="#demo-first" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Demo first</h2>
-<p><img alt="demowaveview" src="///E://Code/Github/android/WaveView/images/waveview.gif" /></p></article></body></html>
+<h2 id="first-view"><a name="user-content-first-view" href="#first-view" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>First View</h2>
+<p><img alt="demowaveview" src="///E://Code/Github/android/WaveView/images/waveview.gif" /></p>
+<h2 id="add-to-your-project"><a name="user-content-add-to-your-project" href="#add-to-your-project" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add to your project</h2>
+<h4 id="step-1-add-the-jitpack-repository-to-your-build-file"><a name="user-content-step-1-add-the-jitpack-repository-to-your-build-file" href="#step-1-add-the-jitpack-repository-to-your-build-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 1. Add the JitPack repository to your build file</h4>
+<p>Add it in your root build.gradle at the end of repositories:</p>
+<pre><code>allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+</code></pre>
+
+<h4 id="step-2-add-the-dependency"><a name="user-content-step-2-add-the-dependency" href="#step-2-add-the-dependency" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 2. Add the dependency</h4>
+<pre><code>dependencies {
+     compile 'com.github.onlynight:WaveView:1.0.0'
+}
+</code></pre>
+
+<h2 id="how-to-use"><a name="user-content-how-to-use" href="#how-to-use" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>How to use</h2>
+<p>in your xml file:</p>
+<pre><code class="xml">&lt;com.github.onlynight.waveview.WaveView
+    android:id=&quot;@+id/waveView1&quot;
+    android:layout_width=&quot;0dp&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:layout_weight=&quot;1&quot;
+    app:isCircle=&quot;false&quot;
+    app:period=&quot;4&quot;
+    app:waveHeightPercent=&quot;0.5&quot;
+    app:waveRange=&quot;15dp&quot;
+    app:waveSpeed=&quot;10&quot;
+    app:waveStrokeWidth=&quot;3dp&quot;/&gt;
+</code></pre>
+
+<p>in your java code file:</p>
+<pre><code class="java">mWaveView1 = (WaveView) findViewById(R.id.waveView1);
+mWaveView1.start();
+</code></pre>
+
+<h2 id="property-explain"><a name="user-content-property-explain" href="#property-explain" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>property explain</h2>
+<pre><code class="xml">
+&lt;declare-styleable name=&quot;WaveView&quot;&gt;
+
+    &lt;!-- define wave speed, example value 10 --&gt;
+    &lt;attr name=&quot;waveSpeed&quot; format=&quot;float&quot;/&gt;
+
+    &lt;!-- define wave range, example value 15dp --&gt;
+    &lt;attr name=&quot;waveRange&quot; format=&quot;dimension|reference&quot;/&gt;
+
+    &lt;!-- define wave 1 color --&gt;
+    &lt;attr name=&quot;wave1Color&quot; format=&quot;color|reference&quot;/&gt;
+
+    &lt;!-- define wave 2 color --&gt;
+    &lt;attr name=&quot;wave2Color&quot; format=&quot;color|reference&quot;/&gt;
+
+    &lt;!-- define wave height percent, the value is between 0 to 1 --&gt;
+    &lt;attr name=&quot;waveHeightPercent&quot; format=&quot;float&quot;/&gt;
+
+    &lt;!-- define paint stroke width, if you want optimizing view,
+    you should change the stroke width more--&gt;
+    &lt;attr name=&quot;waveStrokeWidth&quot; format=&quot;dimension|reference&quot;/&gt;
+
+    &lt;!-- if the view is circle --&gt;
+    &lt;attr name=&quot;isCircle&quot; format=&quot;boolean&quot;/&gt;
+
+    &lt;!-- the sine wave period, value range 0 to all --&gt;
+    &lt;attr name=&quot;period&quot; format=&quot;float&quot;/&gt;
+
+&lt;/declare-styleable&gt;
+
+</code></pre></article></body></html>

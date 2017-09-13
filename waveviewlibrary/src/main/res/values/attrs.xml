@@ -2,14 +2,32 @@
 <resources>
 
     <declare-styleable name="WaveView">
+
+        <!-- define wave speed, example value 10 -->
         <attr name="waveSpeed" format="float"/>
+
+        <!-- define wave range, example value 15dp -->
         <attr name="waveRange" format="dimension|reference"/>
+
+        <!-- define wave 1 color -->
         <attr name="wave1Color" format="color|reference"/>
+
+        <!-- define wave 2 color -->
         <attr name="wave2Color" format="color|reference"/>
+
+        <!-- define wave height percent, the value is between 0 to 1 -->
         <attr name="waveHeightPercent" format="float"/>
+
+        <!-- define paint stroke width, if you want optimizing view,
+        you should change the stroke width more-->
         <attr name="waveStrokeWidth" format="dimension|reference"/>
+
+        <!-- if the view is circle -->
         <attr name="isCircle" format="boolean"/>
+
+        <!-- the sine wave period, value range 0 to all -->
         <attr name="period" format="float"/>
+
     </declare-styleable>
 
 </resources>
